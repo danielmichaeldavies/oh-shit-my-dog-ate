@@ -1,27 +1,46 @@
 .app {
-  display: flex;
   align-items: center;
-  width: 100%;
+  color: $color-white;
+  display: flex;
+  flex-direction: column;
   padding: 0 1rem;
+  width: 100%;
 }
 
 header {
+  align-items: center;
   background-color: $layer;
   border: 1px solid $layer;
-  flex: 1 100% 1200px;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  flex: 1 1 100%;
   justify-content: flex-end;
   padding: 10px;
+  margin-bottom: 50px;
 
   .app-title {
-    text-align: center;
     font-size: 1.8rem;
+    text-align: center;
+  }
+
+  .app-logo {
+    margin-bottom: -50px;
+    width: 50%;
   }
 }
 
-.app-logo {
-  width: 50%;
-  margin-bottom: -50px;
+main {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 5px 10px;
+  width: 100%;
+
+  .article-input {
+    background-color: $layer;
+    border: 1px solid $layer;
+    height: 2rem;
+    text-align: center;
+    width: 100%;
+  }
 }
