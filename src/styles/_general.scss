@@ -12,3 +12,10 @@ body {
   background-color: $color-grey-dark;
   color: $color-white;
 }
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}

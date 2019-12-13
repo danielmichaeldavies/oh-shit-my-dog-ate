@@ -3,6 +3,7 @@
   color: $color-white;
   display: flex;
   flex-direction: column;
+  height: 100%;
   padding: 0 1rem;
   width: 100%;
 }
@@ -13,10 +14,9 @@ header {
   border: 1px solid $layer;
   display: flex;
   flex-direction: column;
-  flex: 1 1 100%;
   justify-content: flex-end;
-  padding: 10px;
-  margin-bottom: 50px;
+  padding: 0.5rem;
+  width: 100%;
 
   .app-title {
     font-size: 1.8rem;
@@ -26,6 +26,7 @@ header {
   .app-logo {
     margin-bottom: -50px;
     width: 50%;
+    max-width: 250px;
   }
 }
 
@@ -33,14 +34,34 @@ main {
   align-items: center;
   display: flex;
   flex-direction: column;
-  padding: 5px 10px;
+  padding: 0.4rem 0.8rem;
   width: 100%;
+  flex: 1;
+
+  .article-result {
+    width: 100%;
+    border: 1px solid $color-white;
+    height: 6rem;
+    margin: 2rem 0;
+  }
 
   .article-input {
     background-color: $layer;
     border: 1px solid $layer;
-    height: 2rem;
+    color: $color-white;
     text-align: center;
     width: 100%;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+  }
+
+  .article-submit {
+    background-color: $blue-layer;
+    border: 1px solid $color-blue-diamond;
+    color: $color-white;
+    font-size: 1.1rem;
+    margin-top: 2rem;
+    padding: 0.3rem 0.6rem;
+    width: 50%;
   }
 }
