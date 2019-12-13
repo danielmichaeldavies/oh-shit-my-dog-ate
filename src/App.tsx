@@ -2,10 +2,16 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 
 const App: React.FC = () => {
-  const [currentArticle, setCurrentArticle] = useState('');
+  const [article, setArticle] = useState('');
+  const [inputValue, setInputValue] = useState('');
+
   const handleInputChange = ({ target: { value } }: { target: { value: string } }) => {
-    setCurrentArticle(value);
+    setInputValue(value);
   };
+
+  const handleSubmit = () => {
+    setArticle(inputValue);
+  }
 
   return (
     <div className="app">
@@ -15,11 +21,15 @@ const App: React.FC = () => {
       </header>
 
       <main>
+        <div className="article-result" />
+
         <input className="article-input"
                placeholder="What did they eat?"
                onChange={handleInputChange}
-               value={currentArticle} />
-        <p>{currentArticle}</p>
+               value={inputValue} />
+
+        <button className="article-submit" onClick={handleSubmit}>Check</button>
+
       </main>
     </div>
   );
